@@ -65,9 +65,9 @@ const App = () => {
     setTasks(updatedTasks);
   }
 
-  const onEditTask = (id, newTitle) => {
+  const onEditTask = (id, newTitle, newDesc) => {
     const updatedTasks = tasks.map(task => {
-      if (task.id === id) return { ...task, title: newTitle }
+      if (task.id === id) return { ...task, title: newTitle, description: newDesc }
 
       return task
     })
